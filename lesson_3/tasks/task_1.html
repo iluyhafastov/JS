@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let nameFirstChild = prompt("Введіть імя першої дитини", "Сашко")
+      let numberCandiesFirst = parseInt(prompt("Кількість цукерок першої дитини", "5"))
+      let nameSecondChild = prompt("Введіть імя другої дитини", "Давід")
+      let numberCandiesSecond = parseInt(prompt("Кількість цукерок другої дитини", "2"))
+      let result
+
+      if (numberCandiesFirst > numberCandiesSecond)
+         result = (`${nameFirstChild} має більше цукерок`)
+      else if (numberCandiesFirst === numberCandiesSecond)
+         result = (`${nameFirstChild} і ${nameSecondChild} мають порівно цукерок`)
+      else if (numberCandiesFirst < numberCandiesSecond)
+         result = (`${nameSecondChild} має більше цукерок`)
+      else result = 'Некоректні дані'
+      document.write(result)
+
+
+
+
+   </script>
+
+</body>
+
+</html>

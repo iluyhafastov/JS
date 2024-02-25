@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let numberMouns = parseInt(prompt('Введіть номер місяця', "4"))
+      let result
+      switch (numberMouns) {
+         case 1:
+            result = "Місяць зими (січень)"
+            break
+         case 2:
+            result = "Місяць зими (лютий)"
+            break
+         case 3:
+            result = "Місяць зими (березень)"
+            break
+         case 4:
+            result = "Місяць весни (квітень)"
+            break
+         case 5:
+            result = "Місяць весни (травень)"
+            break
+         case 6:
+            result = "Місяць весни (червень)"
+            break
+         case 7:
+            result = "Місяць літа (липень)"
+            break
+         case 8:
+            result = "Місяць літа (серпень)"
+            break
+         case 9:
+            result = "Місяць літа (вересень)"
+            break
+         case 10:
+            result = "Місяць літа (жовтень)"
+            break
+         case 11:
+            result = "Місяць літа (листопад)"
+            break
+         case 12:
+            result = "Місяць літа(грудень)"
+            break
+
+         default:
+            result = "Некоректні дані"
+            break;
+      }
+      document.write(result)
+   </script>
+</body>
+
+</html>

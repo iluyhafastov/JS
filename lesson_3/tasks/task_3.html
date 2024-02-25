@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      const minNumber = 1
+      const maxNumber = 5
+
+      let numberRandom = minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1))
+      let enterNamberOne = parseInt(prompt('Введіть число від 1 до 5'))
+      if (enterNamberOne === numberRandom) {
+         alert('Ви виграли')
+      }
+      else {
+         let enterNambertwo = parseInt(prompt('Введіть число від 1 до 5, друга спроба'))
+         if (enterNambertwo === numberRandom) {
+            alert('Ви виграли')
+         }
+         else alert('Ви програли')
+      }
+   </script>
+</body>
+
+</html>
