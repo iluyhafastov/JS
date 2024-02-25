@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let numberOfSeconds = parseInt(prompt('Введіть кількість секунд'))
+      const numMinutes = 60
+      const numHours = 3600
+
+      let numberOfHours = parseInt(numberOfSeconds / numHours)
+      let numberOfMinutes = parseInt((numberOfSeconds % numHours) / numMinutes)
+
+      alert(` ${numberOfHours} годин ${numberOfMinutes} хвилин`)
+   </script>
+</body>
+
+</html>

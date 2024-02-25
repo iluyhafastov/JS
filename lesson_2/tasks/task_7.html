@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let minNamberMonth = 1
+      let maxNamberMonth = 12
+      let minNamberDay = 0
+      let maxNamberDay = 6
+
+      let namberRandomMonth = minNamberMonth + Math.floor(Math.random() * (maxNamberMonth - minNamberMonth + 1))
+      let namberRandomDay = minNamberDay + Math.floor(Math.random() * (maxNamberDay - minNamberDay + 1))
+
+      let sumTotalRandom = namberRandomMonth + namberRandomDay
+      document.write(`Рандомне число місяця ${namberRandomMonth} Рандомне число дня ${namberRandomDay} Сума ${sumTotalRandom} `)
+   </script>
+</body>
+
+</html>

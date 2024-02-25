@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let numberOne = parseFloat(prompt('Введіть перше значення'))
+      let numberTwo = parseFloat(prompt('Введіть друге значення'))
+
+      let sumNamber = numberOne + numberTwo
+      let productNumber = numberOne * numberTwo
+      let fractionNumber = numberOne / numberTwo
+
+      document.write(`
+      <table border="2px">
+      <thead>
+         <tr>
+            <th>Очікуваний результат</th>
+            <th>Отримане значення</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <th>Сума</th>
+            <th>${sumNamber}</th>
+         </tr>
+         <tr>
+            <th>Добуток</th>
+            <th>${productNumber}</th>
+         </tr>
+         <tr>
+            <th>Частка</th>
+            <th>${fractionNumber}</th>
+         </tr>
+      </tbody>
+      
+   </table>
+      `)
+   </script>
+
+</body>
+
+</html>

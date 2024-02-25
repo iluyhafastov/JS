@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let priceProduct = parseFloat(prompt('Введіть вартість товару', '0'))
+      let productOne = parseFloat(prompt('Введіть кількість першого товару', '0'))
+      let productTwo = parseFloat(prompt('Введіть кількість другого товару', '0'))
+      let productThree = parseFloat(prompt('Введіть кількість третього товару', '0'))
+
+      let priceFirstProduct = priceProduct * productOne
+      let priceSecondProduct = priceProduct * productTwo
+      let priceThirdProduct = priceProduct * productThree
+
+      let totalPrice = priceFirstProduct + priceSecondProduct + priceThirdProduct
+
+      document.write(`
+      <table >
+      
+      <tbody>
+         <tr>
+            <th>Ціна першого товару</th>
+            <th>${priceFirstProduct}</th>
+         </tr>
+         <tr>
+            <th>Ціна другого товару</th>
+            <th>${priceSecondProduct}</th>
+         </tr>
+         <tr>
+            <th>Ціна третього товару </th>
+            <th>${priceThirdProduct}</th>
+         </tr>
+         <tr>
+            <th>Загальна сума</th>
+            <th>${totalPrice}</th>
+         </tr>
+      </tbody>
+      
+   </table>
+      `)
+
+   </script>
+</body>
+
+</html>
