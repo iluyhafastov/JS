@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let evenNumber = 0
+      let oddNumber = 0
+      for (let i = 0; i < 100; i++) {
+         const randomNamber = 1 + Math.floor(Math.random() * 1000)
+         if (randomNamber % 2 === 0) {
+            evenNumber++
+         } else if (randomNamber % 2 != 0) {
+            oddNumber++
+         }
+      }
+      document.write(`Праних чисел ${evenNumber} не парних ${oddNumber}`)
+   </script>
+
+</body>
+
+</html>

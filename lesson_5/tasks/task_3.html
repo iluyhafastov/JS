@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let evenNumber = 0
+      let oddNumber = 0
+      let numberOfRandomNumbers = parseInt(prompt("Введіть кількість випадкових чисел"))
+      for (let i = 0; i < 1; i++) {
+         document.write(`<ul>`)
+         for (let i = 0; i < numberOfRandomNumbers; i++) {
+            const randomNamber = 1 + Math.floor(Math.random() * 100)
+            if (randomNamber % 2 === 0) {
+               evenNumber++
+            } else if (randomNamber % 2 != 0) {
+               oddNumber++
+            }
+            document.write(`<li>${randomNamber}</li>`)
+         }
+         document.write(`</ul>`)
+      }
+      document.write(`Парних чисел ${evenNumber} не парних ${oddNumber}`)
+   </script>
+</body>
+
+</html>
+<!-- const randomNamber = 1 + Math.floor(Math.randoom() * 100) -->

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      const elementNamb = 3
+      const rowNamb = 3
+      const tableNamb = 3
+      let elementValue = 1
+
+      for (let tableCount = 1; tableCount <= tableNamb; tableCount++) {
+         document.write(`<table style="border: 1px solid #000; margin: 10px; display: inline-block;">`)
+         for (let row = 1; row <= rowNamb; row++) {
+            document.write(`<tr>`)
+            for (let element = 1; element <= elementNamb; element++) {
+               document.write(`<td style="border: 1px solid #000;">${elementValue}</td>`)
+               elementValue++
+            }
+            document.write(`</tr>`)
+         }
+         document.write(`</table>`)
+      }
+
+
+
+
+
+   </script>
+   <style margin-bottom: 20px;></style>
+</body>
+
+</html>
