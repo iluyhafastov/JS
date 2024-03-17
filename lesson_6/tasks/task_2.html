@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      const investmentAmount = parseInt(prompt('Введіть суму вкладу'))
+      const depositPeriod = 20
+      const interestRate = 20
+      const incomeTax = 5
+      let totalSum = 0
+
+      for (let a = 1; a <= depositPeriod; a++) {
+         totalSum += ((investmentAmount * interestRate / 100) + investmentAmount)
+      }
+      let totalProfi = totalSum - (totalSum * incomeTax / 100)
+      document.write(`Сума яку одержав інвестор  ${totalProfi}`)
+   </script>
+
+</body>
+
+</html>

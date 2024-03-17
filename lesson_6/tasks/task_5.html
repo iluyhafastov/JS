@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let minNamber = 20
+      let maxNamber = 50
+      for (let i = minNamber; i < maxNamber; i++) {
+         const randNumber = minNamber + Math.floor(Math.random() * (maxNamber - minNamber + 1))
+         if (randNumber % 3 === 0 && randNumber % 5 !== 0) {
+            document.write(`${randNumber} <br>`)
+         }
+      }
+   </script>
+</body>
+
+</html>

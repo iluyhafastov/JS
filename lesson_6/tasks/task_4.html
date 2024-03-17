@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let minNumber = 1
+      let maxumber = 100
+      let sum = 0
+      let number = parseInt(prompt('введіть кількість чисел для генерації '))
+      for (let i = 0; i < number; i++) {
+         const randNumber = minNumber + Math.floor(Math.random() * (maxumber - minNumber + 1))
+         if (randNumber % 2 !== 0) {
+            sum += randNumber
+         }
+      }
+      document.write(`сума всіх непарних чисел ${sum}`)
+   </script>
+</body>
+
+
+</html>
