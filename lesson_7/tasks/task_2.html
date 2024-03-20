@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      function isThisWorkingDay(dayNumber) {
+         if (dayNumber <= 5)
+            document.write(`цей день є робочим`)
+         else if (dayNumber <= 7)
+            document.write(`цей  день є вихідний`)
+         else
+            document.write('некоректні дані')
+         return dayNumber
+      }
+      let dayNumber = parseInt(prompt('введіть номер дня неділі'))
+      isThisWorkingDay(dayNumber)
+   </script>
+
+</body>
+
+</html>

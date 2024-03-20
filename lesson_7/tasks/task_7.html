@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      function getTable() {
+         for (let a = 0; a < 1; a++) {
+            document.write('<table style="border: 2px solid #000;">')
+            for (let i = 0; i < lengthRow; i++) {
+               document.write('<tr>')
+               for (let j = 1; j <= lengthColumn; j++) {
+
+                  document.write(`<td>${j}<td>`)
+               }
+               document.write('</tr>')
+            }
+            document.write('</table>')
+         }
+
+      }
+      let lengthRow = parseInt(prompt('введіть кількість рядків'))
+      let lengthColumn = parseInt(prompt('введіть кількість стовпчиків'))
+      getTable()
+   </script>
+</body>
+
+
+</html>

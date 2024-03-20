@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      function getSmInInch(valueSm) {
+         let resultInch = valueSm * inchValue
+         return resultInch
+      }
+      function getKilogramToPound(valueKilo) {
+         let resultPound = valueKilo * paundValue
+         return resultPound.toFixed(2)
+      }
+      function getKilometrToMile(valueKilometr) {
+         let resultMile = valueKilometr * mileValue
+         return resultMile.toFixed(2)
+      }
+
+      let inchValue = 0.3937
+      let paundValue = 2.20462
+      let mileValue = 0.621371
+      let valueSm = parseFloat(prompt('Введіть значення в см'))
+      let valueKilo = parseFloat(prompt('Введіть значення в кг'))
+      let valueKilometr = parseFloat(prompt('Введіть значення в км'))
+      getSmInInch(valueSm)
+      getKilogramToPound(valueKilo)
+      getKilometrToMile(valueKilometr)
+      document.write(`
+      ${valueSm}см = ${getSmInInch(valueSm)} дюймів <br>
+      ${valueKilo}кг = ${getKilogramToPound(valueKilo)} фунтів <br>
+      ${valueKilometr}км = ${getKilometrToMile(valueKilometr)}миль
+      `)
+   </script>
+</body>
+
+</html>

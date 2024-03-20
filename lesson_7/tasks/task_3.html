@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      function getSum(a, b, c, d) {
+         a + b + c + d
+         return a + b + c + d
+      }
+      function getProduct(a, b, c, d) {
+         a * b * c * d
+         return a * b * c * d
+      }
+      function getAveregNum(a, b, c, d) {
+         (a + b + c + d) / 4
+         return (a + b + c + d) / 4
+      }
+      function getMinNam(a, b, c, d) {
+         let minNum = a
+
+         if (minNum > b) minNum = b
+         if (minNum > c) minNum = c
+         if (minNum > d) minNum = d
+         return minNum
+      }
+
+      let a = parseFloat(prompt('Введіть перше число'))
+      let b = parseFloat(prompt('Введіть друге число'))
+      let c = parseFloat(prompt('Введіть трете число'))
+      let d = parseFloat(prompt('Введіть четверте число'))
+      let sum = getSum(a, b, c, d)
+      let product = getProduct(a, b, c, d)
+      let averege = getAveregNum(a, b, c, d)
+      let minNumber = getMinNam(a, b, c, d)
+
+      document.write(` сума число ${sum}<br> добуток чисел ${product}<br> середне арифметичне ${averege}<br> мінімальне число ${minNumber}`)
+   </script>
+</body>
+
+</html>

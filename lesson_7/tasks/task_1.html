@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      function season(monthNumber) {
+         switch (monthNumber) {
+            case 1: month = "січень"
+               break
+            case 2: month = "лютий"
+               break
+            case 3: month = "березень"
+               break
+            case 4: month = "квітень"
+               break
+            case 5: month = "травень"
+               break
+            case 6: month = "червень"
+               break
+            case 7: month = "липень"
+               break
+            case 8: month = "серпень"
+               break
+            case 9: month = "вересень"
+               break
+            case 10: month = "жовтень"
+               break
+            case 11: month = "листопад"
+               break
+            case 12: month = "грудень"
+               break
+         }
+      }
+      let monthNumber = parseInt(prompt('ввести номер місяця'))
+      season(monthNumber)
+      alert(`це ${month}`)
+
+   </script>
+
+</body>
+
+</html>

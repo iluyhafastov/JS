@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      function getValue() {
+         for (let i = 1; i <= 3; i++) {
+            let num = parseInt(prompt(`Введіть число ${i}`))
+            if (num % 2 === 0) numberOfEven++
+            if (num > 0) numberOfPositiveOnes++
+            if (num > 100) greatNamber++
+         }
+         return numberOfEven, numberOfPositiveOnes, greatNamber
+      }
+      let numberOfEven = 0
+      let numberOfPositiveOnes = 0
+      let greatNamber = 0
+      getValue()
+      document.write(`кількість парних ${numberOfEven}<br>
+                      кількість додатних ${numberOfPositiveOnes}<br>
+                     кількість більших за 100 ${greatNamber}
+                     `)
+   </script>
+</body>
+
+
+</html>
