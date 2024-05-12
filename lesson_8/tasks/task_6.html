@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+
+
+      function getMinDayNumberVisitors(numberOfVisitirs, someValue) {
+         let listDay = []
+         for (let i = 0; i < numberOfVisitirs.length; i++) {
+            if (numberOfVisitirs[i] <= someValue)
+               listDay.push(i + 1)
+         }
+         return listDay
+      }
+
+      function getMinContVisitors(numberOfVisitirs) {
+         let min = numberOfVisitirs[0]
+         let minCount = 0
+         for (let i = 1; i < numberOfVisitirs.length; i++) {
+            if (numberOfVisitirs[i] <= min) {
+               min = numberOfVisitirs[i]
+               minCount = i
+            }
+
+         }
+         return ++minCount
+      }
+
+      function getMaxCountVisitors(numberOfVisitirs) {
+         let max = numberOfVisitirs[0]
+         let maxCount = 0
+         for (let i = 1; i < numberOfVisitirs.length; i++) {
+            if (numberOfVisitirs[i] >= max) {
+               max = numberOfVisitirs[i]
+               maxCount = i
+            }
+
+         }
+         return ++maxCount
+      }
+
+      function getSumWorkingDay(numberOfVisitirs, startDay, endDay) {
+         let sum = 0
+         for (let i = startDay - 1; i < endDay; i++) {
+            sum += numberOfVisitirs[i]
+         }
+         return sum
+      }
+
+      function getSumRestDay(numberOfVisitirs, startDay, endDay) {
+         let sum = 0
+         for (let i = startDay - 1; i < endDay; i++) {
+            sum += numberOfVisitirs[i]
+
+         }
+         return sum
+      }
+
+      let numberOfVisitirs = [5, 20, 35, 10, 32, 30, 40]
+      let dayList = getMinDayNumberVisitors(numberOfVisitirs, 20)
+      let minVisitirs = getMinContVisitors(numberOfVisitirs)
+      let maxVisitor = getMaxCountVisitors(numberOfVisitirs)
+      let sumWorkDay = getSumWorkingDay(numberOfVisitirs, 1, 5)
+      let sumRestDay = getSumRestDay(numberOfVisitirs, 6, 7)
+
+      document.write(`
+      <h2>Кількість відвівдувачів ${numberOfVisitirs}</h2>
+      <ul>
+         <li>номери днів, протягом яких кількість відвідувачів була меншою за 20; ${dayList}</li>
+         <li>номери днів, коли кількість відвідувачів була мінімальною; ${minVisitirs}</li>
+         <li>номери днів, коли кількість відвідувачів була максимальною; ${maxVisitor}</li>
+         <li>загальну кількість клієнтів у робочі дні ${sumWorkDay} та окремо загальну кількість днів на вихідних ${sumRestDay}</li>
+         
+         
+         
+         </ul>,
+      ,
+      `)
+   </script>
+</body>
+
+</html>

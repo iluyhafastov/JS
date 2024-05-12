@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      const nameNam = []
+      function getPupilsName() {
+         for (let i = 0; i < 5; i++) {
+            let name = prompt(`Введіть імя ${i + 1}`)
+            nameNam.push(name)
+         }
+         return nameNam
+      }
+      function getIvanName() {
+         let count = 0
+         for (let i = 0; i < nameNam.length; i++) {
+            if (nameNam[i] === 'Іван')
+               count++
+         }
+         return count
+      }
+      getPupilsName()
+      let count = getIvanName()
+      document.write(`Імя Іван зустрічається ${count} рази`)
+   </script>
+</body>
+
+</html>

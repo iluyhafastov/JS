@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+
+
+
+      function getRundomArray(minValue = 10, maxValue = 100, countValue = 12) {
+         let paymentsDuringYear = []
+         for (let i = 0; i < countValue; i++) {
+            paymentsDuringYear.push(minValue + Math.floor(Math.random() * (maxValue - minValue + 1)))
+         }
+         return paymentsDuringYear
+      }
+
+      function getPaymentsSumInRange(paymentsList, startMounth, endMonth, step = 1) {
+         let sum = 0
+         for (let m = startMounth - 1; m < endMonth; m += step) {
+            sum += paymentsList[m]
+         }
+         return sum
+      }
+
+      let paymentsList = getRundomArray()
+
+      document.write(`
+      <h2>Платіжки за рік ${paymentsList}</h2>
+      <ul>
+         <li>за весь рік ${getPaymentsSumInRange(paymentsList, 1, 12,)}</li>
+         <li>у першій половині року${getPaymentsSumInRange(paymentsList, 1, 6)}</li>
+         <li> у другій половині року${getPaymentsSumInRange(paymentsList, 7, 12)}</li>
+         <li>за літо${getPaymentsSumInRange(paymentsList, 6, 8)}</li>
+         <li>за ІІ квартал ${getPaymentsSumInRange(paymentsList, 4, 6)} </li>
+         <li>за парні місяці ${getPaymentsSumInRange(paymentsList, 2, 12, 2)}</li>
+         <li>за місяці, які є початковими у сезоні  ${getPaymentsSumInRange(paymentsList, 3, 12, 3)}</li>
+         </ul>
+      `)
+   </script>
+</body>
+
+</html>

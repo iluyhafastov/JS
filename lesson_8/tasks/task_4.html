@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let productsPrices = [10, 125, 35, 65, 25,]
+      let productsTitles = ['cheese', 'juice', 'bread', 'candy', 'water']
+      let buyersFunds = parseFloat(prompt('Введіть суму коштів на яку розраховуете'))
+
+      function getAffordableGoods(productsTitles, productsPrices, buyersFunds) {
+         let affordableGoods = []
+         for (let i = 0; i < productsPrices.length; i++) {
+            if (buyersFunds >= productsPrices[i])
+               affordableGoods.push(productsTitles[i])
+         }
+         return affordableGoods
+      }
+      document.write(`Перелік товарів які можна придбати: ${getAffordableGoods(productsTitles, productsPrices, buyersFunds)}`)
+   </script>
+</body>
+
+</html>

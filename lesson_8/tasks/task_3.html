@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let studentScore = []
+      function inputScore() {
+         let numberOfIndicators = parseInt(prompt('Bведіть кількість показників'))
+         for (let i = 0; i < numberOfIndicators; i++) {
+            let value = parseInt(prompt(`введіть значення не більше пяти ${i + 1}`))
+            studentScore.push(value)
+         }
+         return studentScore
+      }
+
+      function getMinValue() {
+         let countMin = 0
+         for (let i = 0; i < studentScore.length; i++) {
+            if (studentScore[i] === 2) countMin++
+         }
+         return countMin
+      }
+      function getMiddleValue() {
+         let countMiddle = 0
+         for (let i = 0; i < studentScore.length; i++) {
+            if (studentScore[i] === 4 || studentScore[i] === 5) countMiddle++
+         }
+         return countMiddle
+      }
+
+      function getNumberGradesBelovAvarage() {
+         let counter = 0
+         for (let i = 0; i < studentScore.length; i++) {
+            if (studentScore[i] === 3 || studentScore[i] === 2) counter++
+         }
+         return counter
+      }
+      inputScore()
+      let counter = getNumberGradesBelovAvarage()
+      let countMin = getMinValue()
+      let countMiddle = getMiddleValue()
+
+
+      document.write(`Кількість двійок ${countMin} <br>
+                      Кількість хороших оцінок ${countMiddle} <br> 
+                      кількість оцінок, які нижче середнього ${counter}`)
+
+   </script>
+</body>
+
+</html>
