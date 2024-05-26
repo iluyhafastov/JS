@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+
+
+
+      let array = [150, 20, 654, 123, 51, 12]
+      function getValuesGreaterThanOneHundred(array, number = 100) {
+         let newArray = []
+         for (const element of array) {
+            if (element > 100) newArray.push(element)
+         }
+         return newArray
+      }
+
+      document.write(`${getValuesGreaterThanOneHundred(array, number = 100)}`)
+
+
+   </script>
+</body>
+
+</html>

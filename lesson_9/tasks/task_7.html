@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let arrayPrice = [1020, 654, 1500, 8500, 2300, 550, 1400]
+      const minPrice = 1000
+      const discont = 0.3
+      arrayPrice.forEach((price, index, arrayPrice) => {
+         if (price > minPrice) arrayPrice[index] = price - price * discont
+
+      });
+      for (const price of arrayPrice) {
+         document.write(`${price}<br>`)
+      }
+
+   </script>
+</body>
+
+</html>

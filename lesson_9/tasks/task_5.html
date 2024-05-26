@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let arrayNumbers = [5, 24, 35, 12, 3, -12, -2, 3, 4, -6]
+      function getProductOfNumbers(array) {
+         let sum = 1
+         for (const element of array) {
+            if (element > 0) sum *= element
+         } return sum
+      }
+
+      document.write(`добуток додатних елементів ${getProductOfNumbers(arrayNumbers)}`)
+   </script>
+</body>
+
+</html>

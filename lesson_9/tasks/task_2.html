@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      let numberOfElemnt = parseInt(prompt('введіть кількість елементів'))
+      let filledArray = new Array(numberOfElemnt)
+      let halfElements = Math.round(numberOfElemnt / 2)
+
+
+      filledArray.fill(1, 0, halfElements)
+      filledArray.fill(7, halfElements)
+
+      document.write(`перша половина заповнена 1-цями, а
+                  друга заповнена 7-ками ${filledArray}`)
+   </script>
+</body>
+
+</html>
