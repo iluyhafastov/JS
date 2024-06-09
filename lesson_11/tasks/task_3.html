@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      // номери рядків (від половини до кінця, стовпці від 0 до половини
+      let arrayNumbers = [
+         [3, 25, 14, 24, 5, 14, 8, 4],
+         [4, 98, 56, 2, 7, 6, 8, 5],
+         [25, 10, 32, 1, 4, 9, 15, 14],
+         [9, 4, 6, 3, 2, 12, 5, 7]
+      ]
+      let sumLoverLeftHalf = 0
+
+      for (let rowIndex = arrayNumbers.length / 2; rowIndex < arrayNumbers.length; rowIndex++) {
+         for (let colIndex = 0; colIndex < arrayNumbers[rowIndex].length / 2; colIndex++) {
+            sumLoverLeftHalf += arrayNumbers[rowIndex][colIndex]
+
+         }
+
+      }
+      document.write(`номери рядків (від половини до кінця, стовпці від 0 до половини: <div> ${sumLoverLeftHalf} </div>`)
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      //  У парних рядках – непарні стовпці, у непарних – парні
+      let arrayNumbers = [
+         [3, 25, 14, 24, 5, 14, 8, 4],
+         [4, 98, 56, 2, 7, 6, 8, 5],
+         [25, 10, 32, 1, 4, 9, 15, 14],
+         [9, 4, 6, 3, 2, 12, 5, 7]
+      ]
+
+      // function getSumOddColumns(array) {
+      //    let sumOddColums = 0
+      //    for (let rowIndex = 0; rowIndex < arrayNumbers.length; rowIndex++) {
+      //       if (rowIndex % 2 === 0) {
+      //          for (let colIndex = 0; colIndex < arrayNumbers[rowIndex].length; colIndex++) {
+      //             if (colIndex % 2 != 0) {
+      //                sumOddColums += arrayNumbers[rowIndex][colIndex]
+      //             }
+      //          }
+      //       }
+      //       else {
+      //          for (let colIndex = 0; colIndex < arrayNumbers[rowIndex].length; colIndex++) {
+      //             if (colIndex % 2 === 0) {
+      //                sumOddColums += arrayNumbers[rowIndex][colIndex]
+      //             }
+      //          }
+      //       }
+      //    }
+      //    return sumOddColums
+      // }
+      // let resultSumOddColumns = getSumOddColumns(arrayNumbers)
+      // document.write(`${resultSumOddColumns}`)
+
+      let sumOddColumns = 0
+      for (let rowIndex = 0; rowIndex < arrayNumbers.length; rowIndex++) {
+         for (let colIndex = 0; colIndex < arrayNumbers[rowIndex].length; colIndex++) {
+            if (
+               (rowIndex % 2 === 0 && colIndex % 2 !== 0) || (rowIndex % 2 !== 0 && colIndex % 2 === 0)
+            ) sumOddColumns += arrayNumbers[rowIndex][colIndex]
+         }
+      }
+      document.write(` Сума у парних рядках – непарних стовпців, у непарних – парні ${sumOddColumns}`)
+
+
+   </script>
+</body>
+
+</html>

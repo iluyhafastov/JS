@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+
+      // номери рядків від 0 до половини, стовпці від половини до кінця
+      let arrayNumbers = [
+         [3, 25, 14, 24, 5, 14, 8, 4],
+         [4, 98, 56, 2, 7, 6, 8, 5],
+         [25, 10, 32, 1, 4, 9, 15, 14],
+         [9, 4, 6, 3, 2, 12, 5, 7]
+      ]
+      let sumUpperRightHalf = 0
+
+      for (let rowIndex = 0; rowIndex < arrayNumbers.length / 2; rowIndex++) {
+         for (let colIndex = arrayNumbers[rowIndex].length / 2; colIndex < arrayNumbers[rowIndex].length; colIndex++) {
+            sumUpperRightHalf += arrayNumbers[rowIndex][colIndex]
+         }
+      }
+      document.write(`<div> номери рядків від 0 до половини, стовпці від половини до кінця: ${sumUpperRightHalf} </div>`)
+   </script>
+</body>
+
+</html>
